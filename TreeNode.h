@@ -30,6 +30,15 @@ public:
 
     // returns a pointer to the DBentry the TreeNode contains. 
     DBentry* getEntry() const;
+    
+    bool insert(DBentry* newEntry);
+    
+    DBentry* find(string name, int& probes);
+    
+    //parent and dir are to replace one parent pointer (right or left)
+    bool remove(string name, TreeNode* parent, int dir);
+    
+    TreeNode* leftMax();
 };
 
 #endif 

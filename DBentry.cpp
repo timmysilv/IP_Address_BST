@@ -2,37 +2,39 @@
 #include <string>
 
 DBentry::DBentry(){
-    
+    name = "";
+    IPaddress = 0;
+    active = false;
 }
 
 DBentry::DBentry(string _name, unsigned int _IPaddress, bool _active){
-    
+    name = _name;
+    IPaddress = _IPaddress;
+    active = _active;
 }
 
-DBentry::~DBentry(){
-    
-}
+DBentry::~DBentry(){}
 
 bool DBentry::getActive() const{
-    return true;
+    return active;
 }
 
 unsigned int DBentry::getIPaddress() const{
-    return 0;
+    return IPaddress;
 }
 
 string DBentry::getName() const{
-    return "hi";
+    return name;
 }
 
 void DBentry::setActive(bool _active){
-    
+    active = _active;
 }
 
 void DBentry::setIPaddress(unsigned int _IPaddress){
-    
+    IPaddress = _IPaddress;
 }
 
 void DBentry::setName(string _name){
-    
+    name = _name;
 }
