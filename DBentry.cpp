@@ -1,5 +1,4 @@
 #include "DBentry.h"
-#include <string>
 
 DBentry::DBentry(){
     name = "";
@@ -37,4 +36,11 @@ void DBentry::setIPaddress(unsigned int _IPaddress){
 
 void DBentry::setName(string _name){
     name = _name;
+}
+
+void DBentry::print(){
+    string status;
+    if(active) status = "active";
+    else status = "inactive";
+    cout << name << " : " << IPaddress << " : " << status << endl;
 }

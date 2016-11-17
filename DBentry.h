@@ -2,6 +2,8 @@
 #define _DBENTRY_H
 
 #include <string>
+#include <iostream>
+
 using namespace std;
 
 class DBentry {
@@ -39,7 +41,7 @@ public:
 	// prints the entry in the format 
         // name : IPaddress : active  followed by newline
         // active is printed as a string (active or inactive)
-        friend ostream& operator<< (ostream& out, const DBentry& rhs);
+        void print();
 };
 
 #endif 

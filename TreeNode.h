@@ -38,7 +38,13 @@ public:
     //parent and dir are to replace one parent pointer (right or left)
     bool remove(string name, TreeNode* parent, int dir);
     
-    TreeNode* leftMax();
+    //Sets the parent to the maximum value of the calling tree
+    void max(TreeNode* parent);
+    
+    //Counts active nodes in tree
+    int countActive();
+    
+    void print();
 };
 
 #endif 

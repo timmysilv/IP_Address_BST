@@ -3,6 +3,7 @@
 
 #include "TreeNode.h"
 #include "DBentry.h"
+#include <iostream>
 
 class TreeDB {
 
@@ -49,12 +50,8 @@ public:
    void countActive () const;
 
    // Prints the entire tree, in ascending order of key/name
-   friend ostream& operator<< (ostream& out, const TreeDB& rhs);
-}; 
-
-// You *may* choose to implement the function below to help print the 
-// tree.  You do not have to implement this function if you do not wish to.
-ostream& operator<< (ostream& out, TreeNode* rhs);   
+   void print();
+};
    
 #endif 
 
